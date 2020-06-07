@@ -1,0 +1,19 @@
+<h1>Articles</h1>
+<a routerLink="/article" class="btn btn-sm btn-success mb-2">Add Article</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 30%">Title</th>
+            <th style="width: 30%">Body</th>
+            <th style="width: 30%">Author</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+            <td>{{article.title}}</td>
+            <td>{{article.body}}</td>
+            <td>{{article.author}}</td>
+        </tr>
+    </tbody>
+</table>

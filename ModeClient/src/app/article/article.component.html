@@ -1,0 +1,24 @@
+
+<div class="card">
+    <h1 class="card-header">Add Article</h1>
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #articleForm="ngForm" >
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="model.title"  name="title">
+      </div>
+
+      <div class="form-group">
+        <label for="body">Body</label>
+        <textarea  class="form-control" id="body" [(ngModel)]="model.body"  name="body"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" [(ngModel)]="model.author" name="author"> 
+      </div>
+      <div>
+        <button type="submit" class="btn btn-success" [disabled]="!articleForm.form.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
